@@ -7,6 +7,10 @@ import (
 	"os"
 )
 
+var (
+	portNumber = os.Getenv("PORT")
+)
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
 		http.Error(w, "404 Not Found", http.StatusNotFound)
@@ -36,9 +40,9 @@ func main() {
 	http.Handle("/", fileServer)
 	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
-	port := os.Getenv("PORT")
-	fmt.Printf("Starting Server at port %s\n", port)
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
+
+	fmt.Printf("Starting Server at port %s\n", portNumber)
+	if err := http.ListenAndServe(":"+portNumber, nil); err != nil {
 		log.Fatal(err)
 	}
 }
