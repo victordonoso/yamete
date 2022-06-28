@@ -7,10 +7,6 @@ import (
 	"os"
 )
 
-var (
-	portNumber = os.Getenv("PORT")
-)
-
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
 		http.Error(w, "404 Not Found", http.StatusNotFound)
@@ -35,14 +31,23 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Address = %s\n", address)
 }
 
+func GetPort() string {
+	var port = os.Getenv("PORT")
+	// Set a default port if there is nothing in the environment
+	if port == "" {
+		port = "8080"
+		fmt.Println("INFO: No PORT environment variable detected, defaulting to " + port)
+	}
+	return ":" + port
+}
+
 func main() {
 	fileServer := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fileServer)
 	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
 
-	fmt.Printf("Starting Server at port %s\n", portNumber)
-	if err := http.ListenAndServe(":"+portNumber, nil); err != nil {
+	if err := http.ListenAndServe(GetPort(), nil); err != nil {
 		log.Fatal(err)
 	}
 }
