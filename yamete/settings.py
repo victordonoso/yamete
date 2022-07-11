@@ -53,6 +53,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.twitch',
+    #api
+    'api.apps.ApiConfig',
+    # rest framework
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
