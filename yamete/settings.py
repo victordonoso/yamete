@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # CORS (cross-origin resource sharing) headers to support Cross-site HTTP requests
     'corsheaders',
+    'base',
 ]
 
 MIDDLEWARE = [
