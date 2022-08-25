@@ -1,27 +1,30 @@
-asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1652752042988/work
+asgiref==3.5.2
 blinker==1.4
-brotlipy @ file:///D:/bld/brotlipy_1648854347500/work
+brotlipy==0.7.0
 certifi==2022.6.15
-cffi @ file:///D:/bld/cffi_1656782940775/work
-charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1655906222726/work
-cryptography @ file:///C:/ci/cryptography_1652101729823/work
-defusedxml @ file:///home/conda/feedstock_root/build_artifacts/defusedxml_1615232257335/work
-Django @ file:///D:/bld/django_1656938082324/work
-django-allauth @ file:///home/conda/feedstock_root/build_artifacts/django-allauth_1654611948766/work
+cffi==1.15.1
+charset-normalizer==2.1.0
+cryptography==37.0.1
+defusedxml==0.7.1
+Django==4.0.6
+django-allauth==0.51.0
 django-cors-headers==3.13.0
-djangorestframework @ file:///home/conda/feedstock_root/build_artifacts/djangorestframework_1639677796037/work
-idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1642433548627/work
-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/oauthlib_1643507977997/work
-pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
-PyJWT @ file:///home/conda/feedstock_root/build_artifacts/pyjwt_1652398519695/work
-pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1643496850550/work
-PySocks @ file:///D:/bld/pysocks_1648857426124/work
-python3-openid @ file:///home/conda/feedstock_root/build_artifacts/python3-openid_1612988842750/work
-pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1647961439546/work
-requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1656534056640/work
-requests-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/requests-oauthlib_1643557462909/work
-sqlparse @ file:///home/conda/feedstock_root/build_artifacts/sqlparse_1631317292236/work
-typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1656706066251/work
-tzdata @ file:///home/conda/feedstock_root/build_artifacts/python-tzdata_1647621564023/work
-urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1647489083693/work
-win-inet-pton @ file:///D:/bld/win_inet_pton_1648771897787/work
+djangorestframework==3.13.1
+idna==3.3
+oauthlib==3.2.0
+pip==22.1.2
+pycparser==2.21
+PyJWT==2.4.0
+pyOpenSSL==22.0.0
+PySocks==1.7.1
+python3-openid==3.2.0
+pytz==2022.1
+requests==2.28.1
+requests-oauthlib==1.3.1
+setuptools==63.1.0
+sqlparse==0.4.2
+typing_extensions==4.3.0
+tzdata==2022.1
+urllib3==1.26.9
+wheel==0.37.1
+win-inet-pton==1.1.0
