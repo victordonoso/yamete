@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     # rest framework
     'rest_framework',
+    # CORS (cross-origin resource sharing) headers to support Cross-site HTTP requests
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # CORS (cross-origin resource sharing) headers to support Cross-site HTTP requests
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'yamete.urls'
@@ -149,3 +153,14 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CORS settings:
+# options:
+# CORS_ALLOWED_ORIGINS = [
+"""     'http://127.0.0.1:9000',
+    'http://localhost:8080',
+    "http://example.com",
+    "http://sub.example.com",
+]""" #: List of allowed origins. Default: []
+# CORS_ALLOWED_ORIGIN_REGEXES: List of regex patterns that match allowed origins. Default: []
+CORS_ALLOW_ALL_ORIGINS = True # Boolean indicating if the request is replaced with a secure request. Default: False

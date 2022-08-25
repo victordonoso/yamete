@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Note(models.Model):
-    body = models.TextField()
+    body = models.TextField(default='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel congue enim. Fusce nec nibh blandit, finibus tellus sit amet, eleifend neque. Nunc vehicula velit malesuada, dapibus arcu eu, convallis tellus.')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
