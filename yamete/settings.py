@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-3$+4$e0s$xm^_uqm&bm0r3j@$-5ragjon&(037iroult7!2w0+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # django-allauth authentication backends
 AUTHENTICATION_BACKENDS = [
