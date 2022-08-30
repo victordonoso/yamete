@@ -1,11 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Note
+from eventmanager.models import Matches
 
-class NoteSerializer(ModelSerializer): # Serializer for Note model
+class MatchSerializer(ModelSerializer): # Serializer for Note model
     class Meta:
-        model = Note # Model to serialize
+        model = Matches # Model to serialize
         fields = '__all__' # Fields to serialize
-"""         read_only_fields = ('created', 'updated') # Fields marked as read-only
-        extra_kwargs = {
-            'body': {'required': True}, # Required field
-        } """
+        read_only_fields = ('parent_event', 'slug') # Fields marked as read-only

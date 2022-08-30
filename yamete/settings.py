@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     # CORS (cross-origin resource sharing) headers to support Cross-site HTTP requests
     'corsheaders',
     'base',
+    'eventmanager',
 ]
 
 MIDDLEWARE = [
