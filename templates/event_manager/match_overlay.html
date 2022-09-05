@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %}{{match.match_description}}{% endblock title %}
+    {% block extrahead %}<style>
+      /* This is a comment it is not read by any browser
+          This is where the css styling goes */
+
+      body {
+        background-color: transparent;
+      }
+
+      #container {
+        /*Styling for any element with the id="container" */
+        width: 1920px; /* The width is fixed by pixels */
+        height: 1080px; /* The height is fixed by pixels*/
+        color: black;
+        background-color: transparent;
+      }
+    </style>{% endblock extrahead %}
+    {% block content %}
+    <div id="container">
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td id="team_0_name" align="left">{{match.match_team_0}}</td>
+                    <td id="team_0_score" align="left">{{match.match_team_0_score}}</td>
+                    <td id="team_1_score" align="right">{{match.match_team_1_score}}</td>
+                    <td id="team_1_name" align="right">{{match.match_team_1}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endblock content %}

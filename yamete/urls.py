@@ -22,4 +22,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('api.urls')),
     path('', include('base.urls')),
+    path('', include('eventmanager.urls')),
 ]
