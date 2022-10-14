@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Numeros Primos{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h5>{{ hora }}, los números Primos del 1 al 100 son: </h5>
+        <p>{{ listado }} </p>
+        <p>{{ listado.0 }} </p>
+        <p>{{ listado.9 }} </p>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Numero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for numero in listado %}
+                    <tr class="">
+                        <td scope="row">{{numero}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    console.log("{{ hora }}");
+</script>
+{% endblock scripts %}

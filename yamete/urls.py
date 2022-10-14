@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from alfonso import views as alfonso_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +24,5 @@ urlpatterns = [
     path('', include('api.urls')),
     path('', include('base.urls')),
     path('', include('eventmanager.urls')),
+    path('primos/', alfonso_views.numeros_primos, name='primos'),
 ]
